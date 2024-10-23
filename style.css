@@ -1,0 +1,410 @@
+/* Estilo do body */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  /* Necessário para o funcionamento do ::before */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pseudo-elemento para adicionar o fundo com desfoque */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('img/eu2.png');
+  /* Certifique-se que o caminho está correto */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(15px);
+  /* Aplica o desfoque */
+  z-index: -1;
+  /* Garante que a imagem fique atrás de outros conteúdos */
+}
+
+/* Exemplo de conteúdo */
+.content {
+  position: relative;
+  z-index: 24;
+  color: white;
+  text-align: left;
+  font-size: 3rem;
+  padding-top: 0vh;
+}
+
+h1 {
+  font-family: Arial, sans-serif;
+  /* Tente usar uma fonte segura */
+  font-size: 56px;
+  /* Ajuste o tamanho da fonte */
+  letter-spacing: normal;
+  /* Garante que o espaçamento entre letras seja normal */
+  word-spacing: normal;
+  /* Garante que o espaçamento entre palavras seja normal */
+  text-decoration: none;
+  /* Remove qualquer sublinhado ou linha decorativa */
+  line-height: 1.5;
+  /* Define uma altura de linha adequada */
+  color: #fff;
+  /* Ajuste a cor conforme necessário */
+  text-align: left;
+  margin-left: 3%;
+}
+
+.paragrafos {
+  text-align: left;
+  margin-left: 3%;
+  line-height: 3%;
+}
+
+.typewriter p {
+  font-family: monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black;
+  /* Cursor */
+  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+/* Efeito de piscar o cursor */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+p {
+  font-family: Arial, sans-serif;
+  /* Tente usar uma fonte segura */
+  font-size: 36px;
+  /* Ajuste o tamanho da fonte */
+  letter-spacing: normal;
+  /* Garante que o espaçamento entre letras seja normal */
+  word-spacing: normal;
+  /* Garante que o espaçamento entre palavras seja normal */
+  text-decoration: none;
+  /* Remove qualquer sublinhado ou linha decorativa */
+  line-height: 0.5;
+  /* Define uma altura de linha adequada */
+  color: #fff;
+  /* Ajuste a cor conforme necessário */
+}
+
+/* From Uiverse.io by barisdogansutcu */
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  font-size: 19px;
+  background-color: #282828;
+  color: white;
+  border: solid 2px #15ff00;
+  height: 69px;
+  padding: 2px 9px;
+  border-radius: 54px;
+  font-weight: 600;
+  transform: scale(0.89);
+  position: relative;
+  width: 305px;
+  align-items: center;
+  margin-top: 35%;
+  margin-right: 41%;
+}
+
+.button:not(:hover) .hide,
+.button:not(:hover) .icon::before,
+.button:not(:hover) .icon::after {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.4);
+}
+
+.hide {
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  background: rgb(7, 38, 0);
+  background: linear-gradient(90deg, rgba(7, 38, 0, 1) 0%, rgba(9, 121, 9, 1) 35%, rgba(52, 255, 0, 1) 100%);
+}
+
+.icon {
+  position: relative;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 255, 0, 0.938);
+  border-radius: 100%;
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-19%, -60%);
+  width: 100px;
+  height: 33px;
+  background-color: transparent;
+  border-radius: 12px 22px 2px 2px;
+  border-right: solid 2px rgb(21, 255, 0, 0.938);
+  border-top: solid 2px transparent;
+}
+
+.icon .text-icon {
+  color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  font-size: 12px;
+  left: -37px;
+  top: -38px;
+}
+
+.icon svg {
+  width: 20px;
+  height: 20px;
+  border: solid 2px transparent;
+  display: flex;
+}
+
+.button:hover .icon svg {
+  border: solid 2px rgba(21, 255, 0, 0.938);
+}
+
+.padding-left {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgb(21, 255, 0, 0.938);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-left:before {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-left:after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-left-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: rgb(21, 255, 0, 0.938);
+  left: -24px;
+  top: 11px;
+  transform: rotate(-50deg);
+}
+
+.padding-left-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 255, 0, 0.938);
+  border-radius: 100%;
+}
+
+.padding-left-text {
+  color: rgb(21, 255, 0, 0.938);
+  font-size: 12px;
+  position: absolute;
+  white-space: nowrap;
+  transform: rotate(50deg);
+  bottom: 30px;
+  left: -67px;
+}
+
+.padding-right {
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: rgb(21, 255, 0, 0.938);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-right:before {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-right:after {
+  content: "";
+  width: 2px;
+  height: 10px;
+  background-color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.padding-right-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: rgb(21, 255, 0, 0.938);
+  right: -24px;
+  top: 11px;
+  transform: rotate(50deg);
+}
+
+.padding-right-line::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(21, 255, 0, 0.938);
+  border-radius: 100%;
+}
+
+.padding-right-text {
+  color: rgb(21, 255, 0, 0.938);
+  font-size: 12px;
+  position: absolute;
+  white-space: nowrap;
+  transform: rotate(-50deg);
+  bottom: 33px;
+  left: 18px;
+}
+
+.background {
+  position: absolute;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  right: 27px;
+  bottom: -70px;
+  width: 100px;
+  height: 53px;
+  background-color: transparent;
+  border-radius: 0px 0px 22px 22px;
+  border-right: solid 2px rgb(21, 255, 0, 0.938);
+  border-bottom: solid 2px transparent;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: -20px;
+  width: 6px;
+  height: 6px;
+  background-color: rgb(21, 255, 0, 0.938);
+  border-radius: 100%;
+}
+
+.background-text {
+  position: absolute;
+  color: rgb(21, 255, 0, 0.938);
+  font-size: 12px;
+  bottom: -70px;
+  left: -115px;
+}
+
+.border {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.border:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: solid 2px rgb(21, 255, 0, 0.938);
+  position: absolute;
+  right: 0%;
+  top: -3px;
+  transform: translate(50%, -50%);
+  border-radius: 100%;
+  left: -30px;
+}
+
+.border:after {
+  content: "";
+  width: 2px;
+  height: 25px;
+  background-color: rgb(21, 255, 0, 0.938);
+  position: absolute;
+  right: -7px;
+  top: -15px;
+  transform: translate(50%, -50%) rotate(60deg);
+}
+
+.border .border-text {
+  position: absolute;
+  color: rgb(21, 255, 0, 0.938);
+  font-size: 12px;
+  right: -106px;
+  top: -34px;
+  white-space: nowrap;
+}

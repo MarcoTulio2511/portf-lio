@@ -17,6 +17,21 @@
     /* Permite que o contêiner ocupe toda a largura */
 }
 
+#waicon {
+    width: 40px;
+    height: auto;
+}
+
+#linkedinicon {
+    width: 40px;
+    height: auto;
+    z-index: 465;
+}
+
+#giticon {
+    width: 40px;
+    height: auto;
+}
 
 #projetos .card {
     transition: transform 0.3s ease;

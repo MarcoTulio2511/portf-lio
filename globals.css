@@ -1,0 +1,98 @@
+<<<<<<< HEAD
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Seção "Quem sou e o que faço?" */
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+}
+
+/* Seção "O que as pessoas têm a dizer sobre mim?" */
+blockquote {
+    font-size: 1rem;
+}
+
+.blockquote-footer {
+    font-size: 0.875rem;
+    color: #b5b5b5;
+}
+
+/* Paginador de depoimentos (bolinhas) */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Projetos */
+img.rounded {
+    border-radius: 12px;
+}
+
+/* Ícones de contato */
+img.rounded-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+=======
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Seção "Quem sou e o que faço?" */
+.bg-dark {
+    background-color: #000000 !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+}
+
+/* Seção "O que as pessoas têm a dizer sobre mim?" */
+blockquote {
+    font-size: 1rem;
+}
+
+.blockquote-footer {
+    font-size: 0.875rem;
+    color: #b5b5b5;
+}
+
+/* Paginador de depoimentos (bolinhas) */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+/* Projetos */
+img.rounded {
+    border-radius: 12px;
+}
+
+/* Ícones de contato */
+img.rounded-circle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+>>>>>>> 126b6d7d2d9c81b7df4a34387e9e63ae2e5046de
+}

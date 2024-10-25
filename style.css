@@ -13,7 +13,7 @@
   /* Altere para a fonte desejada */
   font-size: 2.9em;
   /* Tamanho da fonte */
-  white-space: pre;
+  white-space: pre-wrap;
   /* Mantém quebras de linha */
   animation: caret-blink 0.7s step-end infinite;
   /* Animação do cursor */
@@ -101,7 +101,10 @@ nav {
   background: linear-gradient(90deg, #13c784 0%, #392ddd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  white-space: normal;
+  /* Permite quebras de linha */
 }
+
 
 .hero-text p {
   font-size: 1.2rem;
